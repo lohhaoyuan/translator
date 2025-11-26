@@ -1,6 +1,8 @@
 # translator
 
-a lightweight multilingual viewer for . built with next.js, tailwind, and google's cloud translation api.
+a lightweight multilingual phrase viewer. write something dumb in one language and give anyone the option to see what dumb thing you wrote, in any language! this is truly the most inclusive webapp ever made. 
+
+built with next.js, tailwind, google's cloud translation api and copious amounts of Opus 4.1
 
 ## rationale and backstory
 at the world robot olympiad 2025 international finals in singapore, i was sitting at a table next to the playfield of my juniors' team. we were just spectators, but many people came up to us to ask for information or directions. some of these people were not english-speaking, and as a failed bilingual (sorry zhou lao shi) i can only speak english.
