@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Flexoki Light Theme */
+    --background: 48 100% 97%;
+    --foreground: 30 7% 6%;
+    
+    --card: 44 33% 95%;
+    --card-foreground: 30 7% 6%;
+    
+    --popover: 48 100% 97%;
+    --popover-foreground: 30 7% 6%;
+    
+    --primary: 210 70% 39%;
+    --primary-foreground: 48 100% 97%;
+    
+    --secondary: 44 13% 88%;
+    --secondary-foreground: 30 7% 6%;
+    
+    --muted: 44 13% 88%;
+    --muted-foreground: 30 2% 43%;
+    
+    --accent: 173 56% 32%;
+    --accent-foreground: 48 100% 97%;
+    
+    --destructive: 7 59% 43%;
+    --destructive-foreground: 48 100% 97%;
+    
+    --border: 44 13% 88%;
+    --input: 44 13% 88%;
+    --ring: 210 70% 39%;
+    
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-flexoki-paper text-flexoki-tx antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  ::selection {
+    @apply bg-flexoki-cyan/20 text-flexoki-tx;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-flexoki-ui;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-flexoki-ui-3 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-flexoki-tx-3;
+}
+
+/* Focus visible styles */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-flexoki-cyan;
+}
+
+/* Smooth transitions for interactive elements */
+button, a, input, select, textarea {
+  @apply transition-colors duration-150;
+}
+
+/* Typography refinements */
+h1, h2, h3, h4, h5, h6 {
+  @apply text-balance;
+}
+
+p {
+  @apply text-pretty;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(206, 205, 195, 0.3) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+}
